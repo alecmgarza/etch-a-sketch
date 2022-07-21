@@ -1,5 +1,21 @@
-container {
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    height: 800px;
+    width: 800px;
 }
 
 .row {
