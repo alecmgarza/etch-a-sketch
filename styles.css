@@ -11,22 +11,25 @@ body {
     justify-content: center;
 }
 
-.container {
+.grid {
     display: flex;
-    margin: auto;
     height: 800px;
     width: 800px;
+    border: 2px solid;
 }
 
 .row {
     display: flex;
-    flex-direction: row;
+    flex-grow: 1;
+    flex-direction: column;
     justify-content: center;
 }
 
 .cell {
-    border: 2px solid;
-    padding: 15px;
+    display: flex;
+    flex-grow: 1;
+    border: 0.5px solid;
+    
 }
 
 .btn {

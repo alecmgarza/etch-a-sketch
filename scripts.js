@@ -41,6 +41,7 @@ btn.addEventListener('click', () => {
         } else {
             container.removeChild(newGrid);
             newGrid = document.createElement('div');
+            newGrid.classList.add('grid');
             container.appendChild(newGrid);
 
             for (let i = 0; i < squares; i++) {
