@@ -26,16 +26,17 @@ for (let i = 0; i < 16; i++) {
 };
 
 btn.addEventListener('click', () => {
-    container.removeChild(newGrid);
-
     let squares = prompt('How many squares would you like on each side of the grid?');
     
     function createGrid(squares) {
-        if (isNaN(squares) || !squares) {
+        if (squares === null) {
+            return;
+        } else if (isNaN(squares) || !squares || squares == 0) {
             alert('Please enter a valid number.')
         } else if (squares > 100) {
             alert('Please enter a number less than 100.')
         } else {
+            container.removeChild(newGrid);
             newGrid = document.createElement('div');
             container.appendChild(newGrid);
 
@@ -61,4 +62,3 @@ btn.addEventListener('click', () => {
 });
 
 // still need to make padding for each square dynamic
-// page stops working after an invalid response has been input
