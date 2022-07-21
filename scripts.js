@@ -1,4 +1,6 @@
 const container = document.querySelector('#container');
+const div = document.createElement('div');
+div.classList.add('btn');
 
 const btn = document.createElement('button');
 btn.textContent = 'New Grid';
@@ -6,8 +8,9 @@ btn.textContent = 'New Grid';
 let newGrid = document.createElement('div');
 newGrid.classList.add('grid');
 
-container.appendChild(btn);
+container.appendChild(div)
 container.appendChild(newGrid);
+div.appendChild(btn);
 
 for (let i = 0; i < 16; i++) {
     const row = document.createElement('div');
